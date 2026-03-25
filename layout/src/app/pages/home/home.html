@@ -1,5 +1,13 @@
 <main class="flex flex-col min-h-screen bg-emerald-100">
- <header class="md-10 text-center md:text-left">
-    <h2 class="text-3xl">Tecnologias Front-end</h2>
- </header>
+    <header class="md-10 text-center md:text-left">
+        <h2 class=" text-3xl font-extrabold text-emerald-700">Tecnologias Front-end</h2>
+        <p class="mt-6 text-lg text-emerald-500">Conheça abaixo algumas tecnologias front end</p>
+    </header>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gab-6">
+        <article *ngFor="let item of requisicao">
+            <div>
+                <span>{{item.tecnologia}}</span>
+            </div>
+        </article>
+    </div>
 </main>
