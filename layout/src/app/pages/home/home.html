@@ -1,19 +1,23 @@
-<main class="flex flex-col min-h-screen bg-emerald-100">
-    <header class="md-10 text-center md:text-left">
-        <h2 class=" text-3xl font-extrabold text-emerald-800">Tecnologias Front-end</h2>
-        <p class="mt-6 text-lg text-emerald-600">Conheça abaixo algumas tecnologias front end</p>
+<main class="flex flex-col min-h-screen bg-emerald-100 items-center p-4">
+    <header class="w-full max-w-6xl mb-10 text-center">
+        <h2 class="text-3xl font-extrabold text-emerald-800">
+            Tecnologias Front-end
+        </h2>
+        <p class="mt-6 text-lg text-emerald-600">
+            Conheça abaixo algumas tecnologias front end:
+        </p>
     </header>
-   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-8">
-    <article *ngFor="let item of requisicao" 
-             class="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col">
-        <div class="p-6 flex-1">
-            <h3 class="text-xl font-bold text-emerald-800 mb-3">
-                {{item.tecnologia}}
-            </h3>
-            <p class="text-emerald-700 leading-relaxed text-sm md:text-base">
-                {{item.descricao}}
-            </p>
-        </div>
-    </article>
-</div>
+    <div class="flex flex-wrap justify-center gap-6 w-full max-w-6xl">
+        <article *ngFor="let item of requisicao" 
+                 class="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col text-center w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.5rem)] max-w-[320px]">
+            <div class="p-6 flex-1">
+                <h3 class="text-xl font-bold text-emerald-800 mb-3">
+                    {{item.tecnologia}}
+                </h3>
+                <p class="text-emerald-700 leading-relaxed text-sm md:text-base">
+                    {{item.descricao}}
+                </p>
+            </div>
+        </article>
+    </div>
 </main>
